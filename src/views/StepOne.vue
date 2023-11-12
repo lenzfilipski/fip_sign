@@ -24,7 +24,7 @@
             <div>
                 <h3>Explications du fonctionnement de FIP sign :</h3>
                 <p>
-                    Cette petite appli à pour but de faciliter la signature et le dépot du calendrier FIP.<br />
+                    Cette petite appli a pour but de faciliter la signature et le dépot du calendrier FIP.<br />
                     Il est reccomandé de l'utiliser sur un navigateur d'ordinateur, pour pouvoir télécharger le calendrier en couleurs depuis PASS.<br />
                 </p>
                 <p>Le bouton de la primière étape redirige sur pass pour permettre de téléherger le calendrier personnel.
