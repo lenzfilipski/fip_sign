@@ -387,6 +387,7 @@ button {
 
 img {
     height: 3em;
+    background-color: white;
 }
 
 [v-cloak] {

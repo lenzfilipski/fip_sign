@@ -69,8 +69,9 @@ button:focus-visible {
   margin: auto;
   padding: 10px;
   transition: all 0.2s;
-  border-style: none;
-  border-radius: 5px;
+  border-color: #fff;
+  border-width: 1px;
+  border-style: solid;
 }
 .fancy-btn:hover {
   color-scheme: light dark;
@@ -141,12 +142,12 @@ p, label {
     /* color: #213547;
     background-color: #ffffff; */
   }
-  a:hover {
-    /* color: #213547; */
+  /* a:hover {
+    color: #213547;
   }
   button {
-    /* background-color: #f9f9f9; */
-  }
+    background-color: #f9f9f9;
+  } */
 
   .fancy-btn {
     background-color: var(--tertiary-color);
