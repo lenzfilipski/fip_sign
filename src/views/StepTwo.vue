@@ -9,7 +9,7 @@ export default {
     const pdfFile = ref(null);
     const signatureImageFile = ref(null);
     const signatureImageBytes = ref(null);
-    const weekOfYear = ref(getCurrentWeekNumber());
+    const weekOfYear = ref((getCurrentWeekNumber()>0) ? getCurrentWeekNumber() : getCurrentWeekNumber() + 52);
     // The following objects are loaded from the localStorage API or set to a default value
     const signatureImageAsDataUrl = ref(localStorage.getItem('signatureImageAsDataUrl') || '');
     const firstName = ref(localStorage.getItem('firstName') || '');
@@ -207,7 +207,9 @@ export default {
         const today = new Date();
         const firstDayOfYear = new Date(today.getFullYear(), 0, 1);
         const days = Math.floor((today - firstDayOfYear) / (24 * 60 * 60 * 1000));
-        return Math.ceil((days + firstDayOfYear.getDay() + 1) / 7);
+        // The "-3" represents tuesday as the last day of the week
+        // This makes sense because the generated document can be related to the previous week.
+        return Math.ceil((days + firstDayOfYear.getDay() - 3) / 7);
     }
 
     // Signature Drawing Methods
@@ -323,7 +325,7 @@ export default {
                 <img :src="signatureImageAsDataUrl" alt="Signature Image" />
                 <button @click="replaceSignatureFile" class="fancy-btn">Changer la signature</button>
             </div>
-            <div v-if="!signatureImageAsDataUrl">
+            <div v-show="!signatureImageAsDataUrl">
                 <form @submit.prevent="">
                     <label for="signature">Téléversez votre signature au format PNG : </label>
                     <input
@@ -352,6 +354,7 @@ export default {
                     <button @click="saveDrawing" class="fancy-btn">Sauvegarder</button>
                 </div>
             </div>
+            <div style="height: 15vh;"></div>
         </div>
     </div>
 </template>

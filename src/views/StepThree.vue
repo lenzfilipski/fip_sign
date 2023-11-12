@@ -31,6 +31,10 @@ function clickMoodle() {
     transform: translateY(0.5em);
 }
 
+.moodle {
+    max-width: 40vw;
+}
+
 p {
     font-size: x-large;
 }

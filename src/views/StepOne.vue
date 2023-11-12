@@ -31,7 +31,11 @@
                     La segonde étape incorpore la signature et le statut dans le calendrier et formate le nom du fichier.
                     Le bouton de la dernière étape redirige directement sur le dépot de la semaine renseignée à l'étape 2.
                 </p>
+                <p>
+                    Les données renseignées dans le formulaire, à l'étape deux, sont sauvegardées localement pour n'avoir qu'à charger le calendrier les prochaines fois.
+                </p>
                 <a href="/Procedure Depot Feuille Emargement-Moodle-2023-2024.pdf">Ouvrir la procédure d'emmargement</a>
+                <div style="height: 15vh;"></div>
             </div>
         </div>
         
@@ -45,7 +49,7 @@
 }
 
 .pass {
-    width: 60vw;
+    max-width: 40vw;
     margin: auto;
     padding: 10px;
     transition: all 0.2s;
